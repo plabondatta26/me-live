@@ -135,7 +135,7 @@ class LiveGroupRoomConfig(models.Model):
         #     }
         # )    
         # External websocket
-        ws = create_connection(f"{liveRoomSocketBaseUrl}/{self.user_id}/")
+        ws = create_connection(f"{liveRoomSocketBaseUrl}/{self.user_id}")
         ws.send(json.dumps({"message": data}))
         ws.close()
 
