@@ -2,7 +2,6 @@
 # import json 
 
 
-# SERVER_TOKEN = 'AAAAI54LOT4:APA91bEFvXMDkD1IJ_RjbWem9NyhL2LhrUboVQOSD05Tgx0mkzXwg7fKnXhmbWDjfbqaywwIEWizwLYoPrWUrxH3PhrVu1FUmyDrr1nxHbh6G-1q390haefXdrr_6RtkSw2SGXbjdSZo'
 # # # PROJECT_ID = 'moon-live-7ab3d'
 
 # '''
