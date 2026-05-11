@@ -35,6 +35,7 @@ from me_live.utils.constants import liveRoomSocketBaseUrl,kRoomPrefix
 LIVEKIT_HOST= config("LIVEKIT_HOST") 
 LIVEKIT_API_KEY = config("LIVEKIT_API_KEY")
 LIVEKIT_API_SECRET_KEY = config("LIVEKIT_API_SECRET_KEY")
+LIVEKIT_SERVER_URL = config("LIVEKIT_SERVER_URL")
 
 # LIVEKIT_HOST_2= config("LIVEKIT_HOST_2") 
 # LIVEKIT_API_KEY_2 = config("LIVEKIT_API_KEY_2")
@@ -132,7 +133,7 @@ class LiveKitTokenCreateApiView(CreateAPIView):
             token = access_token.to_jwt()
             # cache.set(key=f"livekit_token_{room_name}_{identity}",value=token,timeout=60*60*21,)
     
-        server_url = 'wss://livekit-me-live.mmpvtltd.xyz'
+        server_url = LIVEKIT_SERVER_URL
         # server_url = 'wss://livekit-global.mmpvtltd.xyz'
 
 
