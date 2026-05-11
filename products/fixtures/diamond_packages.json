@@ -1,0 +1,47 @@
+[
+{
+    "model": "products.diamondpackage",
+    "pk": 1,
+    "fields": {
+        "diamonds": 1000,
+        "price": "100.00",
+        "vat": "2.00"
+    }
+},
+{
+    "model": "products.diamondpackage",
+    "pk": 2,
+    "fields": {
+        "diamonds": 2000,
+        "price": "180.00",
+        "vat": "2.00"
+    }
+},
+{
+    "model": "products.diamondpackage",
+    "pk": 3,
+    "fields": {
+        "diamonds": 3000,
+        "price": "250.00",
+        "vat": "2.00"
+    }
+},
+{
+    "model": "products.diamondpackage",
+    "pk": 4,
+    "fields": {
+        "diamonds": 4000,
+        "price": "350.00",
+        "vat": "2.00"
+    }
+},
+{
+    "model": "products.diamondpackage",
+    "pk": 5,
+    "fields": {
+        "diamonds": 5000,
+        "price": "400.00",
+        "vat": "2.00"
+    }
+}
+]

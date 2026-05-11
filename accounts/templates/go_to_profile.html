@@ -1,0 +1,10 @@
+{% extends 'admin/change_form.html' %}
+
+{% block submit_buttons_bottom %}
+    {{ block.super }}
+
+    <input type="submit" value="View Profile" class="btn btn-success form-control" name="_view-profile" style="
+    margin-top: 1rem;
+    background-color: rebeccapurple;
+    ">
+{% endblock %}

@@ -1,0 +1,4 @@
+TEXT_AND_IMAGE = 'text-and-image'
+VIDEO = 'video'
+POST_LIKE = 'POST_LIKE'
+COMMENT_LIKE = 'COMMENT_LIKE'

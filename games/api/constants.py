@@ -1,0 +1,1 @@
+FORTUNE_WHEEL = 'fortune_wheel'

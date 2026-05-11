@@ -1,0 +1,29 @@
+[
+{
+    "model": "products.animatedgift",
+    "pk": 1,
+    "fields": {
+        "gif": "products/gifts/animated_gift_gifs/e7e0d594-bc58-46af-8fb1-9683e1f42d1a.gif",
+        "audio": "",
+        "diamonds": 50
+    }
+},
+{
+    "model": "products.animatedgift",
+    "pk": 2,
+    "fields": {
+        "gif": "products/gifts/animated_gift_gifs/f21ead85-5fe0-4395-8036-5c34ecca5c86.gif",
+        "audio": "",
+        "diamonds": 70
+    }
+},
+{
+    "model": "products.animatedgift",
+    "pk": 3,
+    "fields": {
+        "gif": "products/gifts/animated_gift_gifs/378a1051-63e9-4a60-86ae-74cf739efb4c.gif",
+        "audio": "",
+        "diamonds": 100
+    }
+}
+]

@@ -1,0 +1,42 @@
+[
+{
+    "model": "products.normalgift",
+    "pk": 1,
+    "fields": {
+        "gift_image": "products/gifts/normal_gifts/5ae5ae38-baf8-4870-a31c-9eb5bfc2fec2.png",
+        "diamonds": 10
+    }
+},
+{
+    "model": "products.normalgift",
+    "pk": 2,
+    "fields": {
+        "gift_image": "products/gifts/normal_gifts/3c5232e8-3b61-4b87-9174-c26a83c61f0a.png",
+        "diamonds": 20
+    }
+},
+{
+    "model": "products.normalgift",
+    "pk": 3,
+    "fields": {
+        "gift_image": "products/gifts/normal_gifts/1311a7ec-10ed-4bb9-9e66-9c06530a9f5c.jpg",
+        "diamonds": 30
+    }
+},
+{
+    "model": "products.normalgift",
+    "pk": 4,
+    "fields": {
+        "gift_image": "products/gifts/normal_gifts/6bd1ab7f-0ea9-4432-986e-03d67dc06be1.png",
+        "diamonds": 40
+    }
+},
+{
+    "model": "products.normalgift",
+    "pk": 5,
+    "fields": {
+        "gift_image": "products/gifts/normal_gifts/6f52a7fb-9753-4a4f-8810-13d025751625.png",
+        "diamonds": 50
+    }
+}
+]

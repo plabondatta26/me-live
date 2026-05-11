@@ -1,0 +1,47 @@
+[
+{
+    "model": "products.level",
+    "pk": 1,
+    "fields": {
+        "level": 1,
+        "diamonds": 1000,
+        "frame_gif": "products/level_frame_gifs/6a23cf85-fae3-4569-affb-131f71d522a8.gif"
+    }
+},
+{
+    "model": "products.level",
+    "pk": 2,
+    "fields": {
+        "level": 2,
+        "diamonds": 2000,
+        "frame_gif": "products/level_frame_gifs/0d192bcd-30f1-4c50-8b01-39280ad0074d.gif"
+    }
+},
+{
+    "model": "products.level",
+    "pk": 3,
+    "fields": {
+        "level": 3,
+        "diamonds": 3000,
+        "frame_gif": "products/level_frame_gifs/ba91f385-1360-4348-9aab-f48da98d845a.gif"
+    }
+},
+{
+    "model": "products.level",
+    "pk": 4,
+    "fields": {
+        "level": 4,
+        "diamonds": 4000,
+        "frame_gif": "products/level_frame_gifs/e6f524d9-5d07-4251-ba8d-f98c911222a8.gif"
+    }
+},
+{
+    "model": "products.level",
+    "pk": 5,
+    "fields": {
+        "level": 5,
+        "diamonds": 5000,
+        "frame_gif": "products/level_frame_gifs/d1cd0c10-d6bb-401d-aa3d-c73dca1d0461.gif"
+    }
+}
+]

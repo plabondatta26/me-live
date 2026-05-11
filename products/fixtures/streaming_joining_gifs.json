@@ -1,0 +1,20 @@
+[
+{
+    "model": "products.streamingjoininggif",
+    "pk": 1,
+    "fields": {
+        "gif": "products/streaming_joining_gifs/af1e0de6-63e4-4f07-99f6-d3457fd8f7a1.gif",
+        "diamonds": 100,
+        "days": 15
+    }
+},
+{
+    "model": "products.streamingjoininggif",
+    "pk": 2,
+    "fields": {
+        "gif": "products/streaming_joining_gifs/cae81bff-424d-490e-b330-ea8740c2287c.gif",
+        "diamonds": 50,
+        "days": 15
+    }
+}
+]

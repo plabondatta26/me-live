@@ -1,0 +1,15 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.futuresoft.me_live",
+      "sha256_cert_fingerprints":
+        [
+          "64:54:1C:00:AC:DD:0A:D1:C7:D6:D4:43:65:52:EA:E4:67:C4:24:43:27:90:73:0C:FF:A4:16:F3:68:16:EF:C6",
+          "9F:F1:30:A8:89:66:0C:34:40:2F:C2:82:60:84:72:15:49:94:EA:4F:48:1F:EF:41:84:64:CD:64:B8:92:A7:5C",
+          "49:AF:DF:4D:AE:9C:C2:C4:AB:15:7D:5A:47:4C:86:CD:2F:CE:05:9D:DE:B5:28:E2:9E:F8:14:D3:F2:1D:CD:49"
+        ]
+    }
+  }
+]
