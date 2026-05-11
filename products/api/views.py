@@ -68,7 +68,7 @@ class StandardResultsSetPagination(PageNumberPagination):
 
 #     def create(self, request, *args, **kwargs):
 
-#         # url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyC_0F-dVI4sVjWCekRGkdirfwkr2XyENnQ&maxResults=100&type=video&part=snippet&videoDefinition=standard&q=Taylor Swift music video"
+#         # url = "https://www.googleapis.com/youtube/v3/search?key=&maxResults=100&type=video&part=snippet&videoDefinition=standard&q=Taylor Swift music video"
 #         # response = requests.get(url,)
 #         # json_data = response.json()
 #         # items = json_data['items']
