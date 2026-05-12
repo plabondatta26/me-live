@@ -28,6 +28,7 @@ services:
       - .:/app
       - static_volume:/app/static_root
       - media_volume:/app/media_root
+      - db_data:/app/db_data/db.sqlite3
     networks:
       - melive_network
     depends_on:
@@ -48,6 +49,7 @@ services:
     volumes:
       - .:/app
       - media_volume:/app/media_root
+      - db_data:/app/db_data/db.sqlite3
     networks:
       - melive_network
     depends_on:
@@ -67,6 +69,7 @@ services:
     working_dir: /app
     volumes:
       - .:/app
+      - db_data:/app/db_data/db.sqlite3
     networks:
       - melive_network
     depends_on:
@@ -76,6 +79,7 @@ volumes:
   redis_data:
   static_volume:
   media_volume:
+  db_data:
 
 networks:
   melive_network:

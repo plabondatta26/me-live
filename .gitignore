@@ -170,3 +170,4 @@ media/
 
 # history files
 *.history
+db.sqlite3
