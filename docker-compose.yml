@@ -18,11 +18,14 @@ services:
     container_name: melive_web
     restart: unless-stopped
     env_file: .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=me_live.settings
+      - PYTHONPATH=/app
     command: daphne -b 0.0.0.0 -p 8000 me_live.asgi:application
     ports:
       - "8000:8000"
     volumes:
-      - ./src:/app
+      - .:/app
       - static_volume:/app/static_root
       - media_volume:/app/media_root
     networks:
@@ -43,7 +46,7 @@ services:
     command: celery -A me_live worker --loglevel=info --concurrency=4
     working_dir: /app
     volumes:
-      - ./src:/app
+      - .:/app
       - media_volume:/app/media_root
     networks:
       - melive_network
@@ -63,7 +66,7 @@ services:
     command: celery -A me_live beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
     working_dir: /app
     volumes:
-      - ./src:/app
+      - .:/app
     networks:
       - melive_network
     depends_on:
