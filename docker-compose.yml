@@ -38,6 +38,7 @@ services:
     restart: unless-stopped
     env_file: .env
     command: celery -A me_live worker --loglevel=info --concurrency=4
+    working_dir: /app
     volumes:
       - ./src:/app
       - media_volume:/app/media_root
@@ -54,6 +55,7 @@ services:
     restart: unless-stopped
     env_file: .env
     command: celery -A me_live beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    working_dir: /app
     volumes:
       - ./src:/app
     networks:
