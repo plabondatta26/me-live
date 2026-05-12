@@ -38,7 +38,7 @@ COPY . .
 RUN mkdir -p /app/static_cdn
 
 # Create database directory and set permissions
-RUN mkdir -p /app/db_data && touch /app/db_data/db.sqlite3 && chmod 666 /app/db_data/db.sqlite3
+RUN mkdir -p /app/db_data && chmod 666 /app/db.sqlite3
 
 # --------------------------
 # 5. Expose port
