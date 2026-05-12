@@ -135,9 +135,16 @@ class LiveGroupRoomConfig(models.Model):
         #     }
         # )    
         # External websocket
-        ws = create_connection(f"{liveRoomSocketBaseUrl}/{self.user_id}")
-        ws.send(json.dumps({"message": data}))
-        ws.close()
+        try:
+            ws = create_connection(f"{liveRoomSocketBaseUrl}/{self.user_id}/")
+            ws.send(json.dumps({"message": data}))
+            ws.close()
+        except Exception as e:
+            # Log the error but don't fail the save operation
+            print(f"WebSocket connection failed for user {self.user_id}: {e}")
+            import traceback
+            traceback.print_exc()
+            pass
 
         room_name = f"{kRoomPrefix}{self.user_id}"
         cache.set(key=f"group_room_config_{room_name}",value=group_room_config,timeout=60*60*21,)
