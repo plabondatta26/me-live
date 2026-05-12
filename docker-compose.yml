@@ -1,0 +1,71 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: melive_redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - melive_network
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: melive_web
+    restart: unless-stopped
+    env_file: .env
+    command: daphne -b 0.0.0.0 -p 8000 me_live.asgi:application
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app
+      - static_volume:/app/static_root
+      - media_volume:/app/media_root
+    networks:
+      - melive_network
+    depends_on:
+      - redis
+
+  celery_worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: melive_celery_worker
+    restart: unless-stopped
+    env_file: .env
+    command: celery -A me_live worker --loglevel=info --concurrency=4
+    volumes:
+      - ./src:/app
+      - media_volume:/app/media_root
+    networks:
+      - melive_network
+    depends_on:
+      - redis
+
+  celery_beat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: melive_celery_beat
+    restart: unless-stopped
+    env_file: .env
+    command: celery -A me_live beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes:
+      - ./src:/app
+    networks:
+      - melive_network
+    depends_on:
+      - redis
+
+volumes:
+  redis_data:
+  static_volume:
+  media_volume:
+
+networks:
+  melive_network:
+    external: true
