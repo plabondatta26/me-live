@@ -37,6 +37,9 @@ services:
     container_name: melive_celery_worker
     restart: unless-stopped
     env_file: .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=me_live.settings
+      - PYTHONPATH=/app
     command: celery -A me_live worker --loglevel=info --concurrency=4
     working_dir: /app
     volumes:
@@ -54,6 +57,9 @@ services:
     container_name: melive_celery_beat
     restart: unless-stopped
     env_file: .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=me_live.settings
+      - PYTHONPATH=/app
     command: celery -A me_live beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
     working_dir: /app
     volumes:
