@@ -25,14 +25,14 @@ RUN apt-get update && apt-get install -y \
 # --------------------------
 # 3. Install Python packages
 # --------------------------
-COPY src/requirements.txt .
+COPY requirements.txt .
 RUN pip install --upgrade pip
-RUN pip install -r src/requirements.txt
+RUN pip install -r requirements.txt
 
 # --------------------------
 # 4. Copy project
 # --------------------------
-COPY src/ .
+COPY . .
 
 RUN mkdir -p /app/static_cdn
 
