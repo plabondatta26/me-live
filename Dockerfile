@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     zlib1g-dev \
     curl \
+    git \
     && apt-get clean
 
 # --------------------------
